@@ -65,6 +65,27 @@ Sentry.init({
 });
 ```
 
+### 1.4 環境分離戦略
+
+TASUKIでは、データの安全性と開発効率を両立させるため、以下の環境分離を徹底します。
+
+| 環境 | 用途 | Supabase プロジェクト | データ扱い |
+|------|------|-------------------|------------|
+| **Production** | 本番運用 | `tasuki-prod` | **永続化**（削除厳禁） |
+| **Staging** | 結合テスト | `tasuki-staging` | 定期リセット可 |
+| **Development** | ローカル開発 | `localhost` (CLI) | 随時リセット |
+
+**環境変数の切り替え**:
+Flutterアプリビルド時に `--dart-define` または `.env` ファイルで切り替えます。
+
+```bash
+# Production
+flutter build ipa --dart-define=FLAVOR=prod
+
+# Staging
+flutter build ipa --dart-define=FLAVOR=staging
+```
+
 ---
 
 ## 2. アラート設定

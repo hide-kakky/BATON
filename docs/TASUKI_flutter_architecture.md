@@ -82,6 +82,35 @@ apps/app/
 └── test/
 ```
 
+```
+
+### 1.5 環境設定とFlavor
+
+FlutterのFlavor機能と `--dart-define` を使用して、ビルド時に環境を切り替えます。
+
+**Flavor定義**:
+- `dev`: ローカル開発用
+- `staging`: 検証環境用
+- `prod`: 本番環境用
+
+**Envクラス実装**:
+```dart
+// lib/core/config/env.dart
+class Env {
+  static const String flavor = String.fromEnvironment('FLAVOR', defaultValue: 'dev');
+  static const String supabaseUrl = String.fromEnvironment('SUPABASE_URL');
+  static const String supabaseAnonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
+
+  static bool get isDev => flavor == 'dev';
+  static bool get isProd => flavor == 'prod';
+}
+```
+
+**ビルドコマンド例**:
+```bash
+flutter run --dart-define=FLAVOR=dev --dart-define=SUPABASE_URL=...
+```
+
 ---
 
 ## 2. Riverpod Provider 設計

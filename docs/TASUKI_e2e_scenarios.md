@@ -17,7 +17,16 @@ Staff が動画を録画し、AI が自動でマニュアル化し、Manager が
 - Mux Webhook が正常に動作
 - Gemini API が利用可能
 
-### 1.3 テスト手順
+### 1.3 テスト環境における認証
+E2Eテストでは、マジックリンク認証を自動化するために **Inbucket** (Supabase CLI 同梱のメールキャプチャツール) を使用します。
+
+**認証フロー**:
+1. テストコードから `signInWithOtp` を実行
+2. Inbucket API (`http://localhost:54324/api/v1/mailbox/{email}`) をポーリング
+3. 最新のメールからマジックリンクを抽出
+4. リンクにアクセスしてセッション確立
+
+### 1.4 テスト手順
 
 #### Step 1: Staff - Flow 録画
 1. `staff_user` でログイン

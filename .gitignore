@@ -61,3 +61,6 @@ temp/
 
 # Git artifacts (brain directory)
 .gemini/
+
+# Blog and personal notes (not committed)
+blog/

@@ -32,6 +32,7 @@
 
 ### 1.2 Supabase プロジェクト
 1. プロジェクト作成 → `supabase init`。
+   - **Note**: 本番用 (`tasuki-prod`) と開発用 (`tasuki-staging`) を分けて作成すること。
 2. テーブル作成（`schema.sql` に定義）：`organizations`, `stores`, `users`, `memberships`, `handovers`, `manuals`, `ai_jobs`, `audit_logs`, `manual_edits`。
 3. `users` は `auth.users` を参照する `profiles` view を推奨（`auth.uid()` 取得を簡単にするため）。
 4. 曖昧な領域は `jsonb meta` を保持して OODA の余地を確保。

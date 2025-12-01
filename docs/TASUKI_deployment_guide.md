@@ -8,11 +8,11 @@
 
 TASUKIは以下の3つの環境を推奨します:
 
-| 環境 | 用途 | URL例 |
-|------|------|-------|
-| **Development** | ローカル開発 | `localhost` |
-| **Staging** | 本番前検証 | `tasuki-staging.vercel.app` |
-| **Production** | 本番環境 | `tasuki.com` |
+| 環境 | 用途 | Supabase Project | URL例 |
+|------|------|------------------|-------|
+| **Development** | ローカル開発 | `localhost` | `localhost` |
+| **Staging** | 本番前検証 | `tasuki-staging` | `tasuki-staging.vercel.app` |
+| **Production** | 本番環境 | `tasuki-prod` | `tasuki.com` |
 
 ---
 

@@ -22,23 +22,38 @@ cd TASUKI
 ```
 
 ### 1.2 環境変数ファイル作成
+環境ごとにファイルを作成します。
+
 ```bash
+# ローカル開発用 (.gitignore済み)
 cp .env.example .env
+
+# (Optional) 環境別ファイル
+cp .env.example .env.staging
+cp .env.example .env.prod
 ```
 
 `.env` ファイルを開き、以下のセクションを順次設定していきます（次のステップで取得）。
+ローカル開発では `supabase start` で表示される値を `.env` に設定します。
 
 ---
 
 ## 2. Supabase プロジェクトセットアップ
 
-### 2.1 プロジェクト作成
+### 2.1 プロジェクト作成 (環境分離)
+本番用と開発用の2つのプロジェクトを作成します。
+
+**1. Production (本番用)**
 1. [Supabase](https://supabase.com/) にアクセス
 2. "New Project" をクリック
-3. プロジェクト名: `tasuki-dev` (任意)
+3. プロジェクト名: `tasuki-prod`
 4. Database Password を設定（強力なパスワード）
 5. Region: `Northeast Asia (Tokyo)` を選択
-6. "Create new project" をクリック
+
+**2. Staging (開発用)**
+1. 同様に新しいプロジェクトを作成
+2. プロジェクト名: `tasuki-staging`
+3. Region: `Northeast Asia (Tokyo)`
 
 ### 2.2 API キー取得
 1. プロジェクトダッシュボード → Settings → API
@@ -56,11 +71,26 @@ brew install supabase/tap/supabase
 npm install -g supabase
 ```
 
-### 2.4 ローカル開発環境の初期化
+### 2.4 ローカル開発環境の初期化 (推奨)
+Supabase CLI を使ってローカル環境を立ち上げます。これにより、安全かつ高速に開発できます。
+
 ```bash
-supabase init
-supabase login
-supabase link --project-ref YOUR_PROJECT_REF
+# ローカル環境起動
+supabase start
+
+# ステータス確認 (API URLやInbucket URLが表示されます)
+supabase status
+```
+
+**Inbucket (メール確認ツール)**:
+ローカル環境ではメールは実際には送信されず、Inbucket に捕捉されます。
+- URL: `http://localhost:54324`
+- テスト時の認証確認に使用します。
+
+### 2.5 クラウド環境へのリンク (デプロイ用)
+```bash
+# Staging環境にリンク
+supabase link --project-ref YOUR_STAGING_PROJECT_REF
 ```
 
 ### 2.5 データベーススキーマ適用

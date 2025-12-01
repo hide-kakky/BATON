@@ -11,8 +11,12 @@
 
 ## 2. 環境変数 (.env)
 
-プロジェクトルートの `.env` (または `.env.local`) に以下の変数を設定してください。
+プロジェクトルートに環境ごとの `.env` ファイルを作成してください。
 **注意**: API キーなどの機密情報は絶対に Git にコミットしないでください。
+
+- `.env` (ローカル開発用)
+- `.env.staging` (Staging用)
+- `.env.prod` (Production用)
 
 ```bash
 # Supabase (Local or Remote)
@@ -35,8 +39,13 @@ APP_ENV="development" # development | staging | production
 ## 3. Supabase セットアップ
 
 ### 3.1 プロジェクト作成
-1. Supabase Dashboard で新規プロジェクトを作成。
-2. Database Password を設定し、安全に保管する。
+環境ごとにプロジェクトを作成します。
+
+1. **Production**: `tasuki-prod`
+2. **Staging**: `tasuki-staging`
+3. **Development**: `localhost` (Supabase CLI)
+
+各環境で Database Password を設定し、安全に保管してください。
 
 ### 3.2 データベース構築
 `docs/TASUKI_database_schema.md` に基づき、テーブルと RLS を作成します。
@@ -73,10 +82,17 @@ supabase secrets set GEMINI_API_KEY=AIza...
 
 ## 6. Edge Functions デプロイ
 
+環境を指定してデプロイします。
+
 ```bash
-supabase functions deploy mux_webhook
-supabase functions deploy ai_process_handover
-supabase functions deploy import_google_doc
+# Staging へのデプロイ
+supabase functions deploy mux_webhook --project-ref <staging-project-ref>
+supabase functions deploy ai_process_handover --project-ref <staging-project-ref>
+supabase functions deploy import_google_doc --project-ref <staging-project-ref>
+
+# Production へのデプロイ (慎重に!)
+supabase functions deploy mux_webhook --project-ref <prod-project-ref>
+# ...
 ```
 
 ## 7. ローカル開発環境
