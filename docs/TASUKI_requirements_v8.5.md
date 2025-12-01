@@ -1,4 +1,4 @@
-# BATON 要件定義書 v8.6（正式・統合版 / Full Spec）
+# TASUKI 要件定義書 v8.6（正式・統合版 / Full Spec）
 
 | 項目 | 内容 |
 | --- | --- |
@@ -10,9 +10,9 @@
 ---
 
 ## 0. エグゼクティブサマリ
-- BATON は飲食店現場の暗黙知を Flow（現場入力）→ Stock（知識化）で自動資産化する AI ネイティブ OS。
+- TASUKI は飲食店現場の暗黙知を Flow（現場入力）→ Stock（知識化）で自動資産化する AI ネイティブ OS。
 - 「新人が辞めない店を技術でつくる」ことが唯一の目的。7 日以内に「教育コストが下がった」と実感できる UX を提供する。
-- MVP において、Flow 起点のマニュアル生成に加え、既存マニュアル（Google Docs）取り込みによる Stock 化をサポートする。店長（Manager）は Google ドキュメントの共有リンクを指定するだけで、自動的に BATON 内へドラフト生成できる。
+- MVP において、Flow 起点のマニュアル生成に加え、既存マニュアル（Google Docs）取り込みによる Stock 化をサポートする。店長（Manager）は Google ドキュメントの共有リンクを指定するだけで、自動的に TASUKI 内へドラフト生成できる。
 - MVP のスコープは Flow→Stock の 1 本線に集中し、Evaluation は PMF 後に解禁。
 - プライマリ KPI は M3 Retention（チャーン率）。先行指標は Flow 投稿数 / Flow→Stock 変換率 / Manager 承認率。
 - Golden Stack：Frontend=Flutter/Riverpod/isar、Backend=Supabase、Video=Mux、AI=Gemini 3。個人開発速度と将来 GCP への卒業容易性を両立。
@@ -259,5 +259,5 @@ Flow→Stock 自動化により暗黙知を可視化し、7 日以内に教育�
 ---
 
 ## 13. 結論
-BATON v8.5r1 は、現場負荷ゼロ × AI 自動化 × 心理的安全性 × スケール設計を同時に満たす正式な要件定義。MVP は Flow→Stock の一気通貫に集中し、OODA と Retention を最優先で市場学習を実施する。データ蓄積に応じて Evaluation を段階的に開放し、抽象化レイヤにより GCP への卒業も最小差分で実現可能。
+TASUKI v8.5r1 は、現場負荷ゼロ × AI 自動化 × 心理的安全性 × スケール設計を同時に満たす正式な要件定義。MVP は Flow→Stock の一気通貫に集中し、OODA と Retention を最優先で市場学習を実施する。データ蓄積に応じて Evaluation を段階的に開放し、抽象化レイヤにより GCP への卒業も最小差分で実現可能。
 

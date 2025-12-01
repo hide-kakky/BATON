@@ -1,8 +1,8 @@
-# BATON 実装手引書 v1.0r1
+# TASUKI 実装手引書 v1.0r1
 
 | 項目 | 内容 |
 | --- | --- |
-| ベース要件 | `docs/BATON_requirements_v8.5.md` |
+| ベース要件 | `docs/TASUKI_requirements_v8.5.md` |
 | 対象期間 | 20 日（Phase1〜3） |
 | 想定チーム | Founder/PM + 個人開発メイン（複数人にも対応） |
 
@@ -201,7 +201,7 @@
 ---
 
 ## 7. 参考ドキュメント
-- 要件定義：`docs/BATON_requirements_v8.5.md`
+- 要件定義：`docs/TASUKI_requirements_v8.5.md`
 - CODEX 誘導：`CODEX_PROMPT.md`, `agent.md`, `plan.md`
 - Slack / Sentry / Supabase CLI のセットアップメモは `docs/ops/`（別途作成予定）
 

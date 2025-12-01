@@ -7,7 +7,7 @@ metadata:
     - version: v8.5r1
       note: "Improved readability and clarified open points."
 executive_summary:
-  - "BATON is an AI-native operations OS that turns on-site tacit knowledge into Flow (input) → Stock (structured knowledge) assets."
+  - "TASUKI is an AI-native operations OS that turns on-site tacit knowledge into Flow (input) → Stock (structured knowledge) assets."
   - "Mission: build restaurants where new hires never quit by letting them feel education cost relief within 7 days."
   - "MVP scope stays laser-focused on the Flow→Stock pipeline; Evaluation remains locked until PMF (Phase 4)."
   - "Primary KPI = M3 Retention, with leading indicators Flow volume, Flow→Stock success rate, and Manager approvals."
@@ -300,4 +300,4 @@ risks_and_open_items:
     mitigation: "Weekly reports plus Slack alerts when near thresholds."
   - risk: "Multilingual context loss"
     mitigation: "Add contextual tips and run multilingual QA."
-conclusion: "BATON v8.5r1 keeps the focus on Flow→Stock, prioritizes OODA + Retention, and leverages abstraction layers to enable low-friction scaling or graduation to GCP."
+conclusion: "TASUKI v8.5r1 keeps the focus on Flow→Stock, prioritizes OODA + Retention, and leverages abstraction layers to enable low-friction scaling or graduation to GCP."

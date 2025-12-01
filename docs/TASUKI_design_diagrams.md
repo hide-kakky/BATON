@@ -1,6 +1,6 @@
-# BATON デザイン図面 v1.0
+# TASUKI デザイン図面 v1.0
 
-本ドキュメントは `docs/BATON_requirements_v8.6.md` および `docs/BATON_implementation_guide_v1.0.md` を補完する、開発者向けの視覚的資料です。
+本ドキュメントは `docs/TASUKI_requirements_v8.6.md` および `docs/TASUKI_implementation_guide_v1.0.md` を補完する、開発者向けの視覚的資料です。
 
 ## 1. システムシーケンス図
 

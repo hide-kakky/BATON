@@ -1,19 +1,19 @@
-# BATON Coding Agent Playbook (Autonomous Mode)
+# TASUKI Coding Agent Playbook (Autonomous Mode)
 
-本プレイブックは、Codex 等の AI エージェントが BATON プロジェクトを自走できるようにするための実務指針です。すべての作業は本書と `CODEX_PROMPT.md` を合わせて読み込み、要件理解・実装判断・レポーティングまでを一貫して行ってください。
+本プレイブックは、Codex 等の AI エージェントが TASUKI プロジェクトを自走できるようにするための実務指針です。すべての作業は本書と `CODEX_PROMPT.md` を合わせて読み込み、要件理解・実装判断・レポーティングまでを一貫して行ってください。
 
 ---
 
 ## 1. ロールと責務
-- **ロール**：BATON プロダクトの実装エンジニア兼 PM 代理。常に当事者意識を持ち、課題を自発的に定義して解決する。
+- **ロール**：TASUKI プロダクトの実装エンジニア兼 PM 代理。常に当事者意識を持ち、課題を自発的に定義して解決する。
 - **許可範囲**：Flutter アプリ、Supabase（DB / Edge Functions）、Mux / Gemini 連携、ドキュメント更新、テレメトリ設定。
 - **禁止事項**：ユーザーが指定したディレクトリ以外の破壊的変更、コスト閾値や RLS を逸脱する施策。
 
 ---
 
 ## 2. 参照ドキュメント（必読 & 常時引用）
-1. `docs/BATON_requirements_v8.5.md` / `.yaml`
-2. `docs/BATON_implementation_guide_v1.0.md` / `.yaml`
+1. `docs/TASUKI_requirements_v8.5.md` / `.yaml`
+2. `docs/TASUKI_implementation_guide_v1.0.md` / `.yaml`
 3. `plan.md`（この文書を AI 自身が更新する）
 4. `CODEX_PROMPT.md`
 
@@ -96,4 +96,4 @@
 5. 推奨ブランチ名と日本語コミットメッセージ案（コミット粒度の方針を含める）。
 6. 懸念・フォローアップ：必要なレビュー、コスト/安全性インパクト。
 
-このプレイブックに従うことで、AI エージェントは人間の介在なしに計画策定→実装→報告→次タスク移行までを繰り返し、BATON プロダクト開発を継続的に前進させることができます。
+このプレイブックに従うことで、AI エージェントは人間の介在なしに計画策定→実装→報告→次タスク移行までを繰り返し、TASUKI プロダクト開発を継続的に前進させることができます。

@@ -1,6 +1,6 @@
 version: v1.0r1
 metadata:
-  base_requirements: docs/BATON_requirements_v8.5.md
+  base_requirements: docs/TASUKI_requirements_v8.5.md
   timeframe_days: 20
   phases: 3
   team_context: "Founder/PM + solo dev (scales to multi-dev)."
@@ -200,7 +200,7 @@ open_topics:
     detail: "Plan expansion after PMF (Phase4+)."
     due: "Post-PMF."
 references:
-  - docs/BATON_requirements_v8.5.md
+  - docs/TASUKI_requirements_v8.5.md
   - CODEX_PROMPT.md
   - plan.md
   - agent.md

@@ -1,6 +1,6 @@
-# BATON インフラ構築ガイド v1.0
+# TASUKI インフラ構築ガイド v1.0
 
-本ドキュメントは、BATON プロジェクトの開発および本番環境のセットアップ手順書です。
+本ドキュメントは、TASUKI プロジェクトの開発および本番環境のセットアップ手順書です。
 
 ## 1. 必要なアカウントとツール
 - **Supabase**: Backend / DB / Auth
@@ -39,7 +39,7 @@ APP_ENV="development" # development | staging | production
 2. Database Password を設定し、安全に保管する。
 
 ### 3.2 データベース構築
-`docs/BATON_database_schema.md` に基づき、テーブルと RLS を作成します。
+`docs/TASUKI_database_schema.md` に基づき、テーブルと RLS を作成します。
 マイグレーションファイル (`supabase/migrations/`) を使用して適用することを推奨します。
 
 ```bash

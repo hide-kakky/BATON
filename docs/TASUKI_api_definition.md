@@ -1,6 +1,6 @@
-# BATON API 定義書 v1.0
+# TASUKI API 定義書 v1.0
 
-本ドキュメントは、BATON プロジェクトにおけるサーバーサイド（Supabase Edge Functions）および外部連携（Webhooks）のインターフェース定義です。
+本ドキュメントは、TASUKI プロジェクトにおけるサーバーサイド（Supabase Edge Functions）および外部連携（Webhooks）のインターフェース定義です。
 
 ## 1. Edge Functions
 
